@@ -1,28 +1,22 @@
 ﻿using System;
-using Person_oop;
 
 namespace Person_oop
 {
     class Program
-    {
-        
+    {        
         static void Main(string[] args)
         {
-            Pearson[] person = new Pearson[3];
-            Pearson[] loaded = Load(person);
+            Person[] people = new Person[1];
+            Person[] peopleWithDetail = Load(people);
 
-            for (int i = 0; i<loaded.Length; i++)
+            foreach (Person person in peopleWithDetail)
             {
-                Console.WriteLine(loaded[i].Display());
+                Console.WriteLine(person.ToString());
             }
-         
- 
-            //Console.WriteLine(zie.Email);
         }
 
-        static Pearson[] Load(Pearson[] person)
+        static Person[] Load(Person[] person)
         {
-
             string name, id, contact, address, email;
 
             for (int i = 0; i<person.Length; i++)
@@ -46,14 +40,9 @@ namespace Person_oop
                 Console.Write("Enter Email: ");
                 email = Console.ReadLine();
 
-                person[i] = new Pearson(name,id,contact,address,email);
+                person[i] = new Person(name,id,contact,address,email);
             }
             return person;
         }
-
-
-        
-
-        
     }
 }
