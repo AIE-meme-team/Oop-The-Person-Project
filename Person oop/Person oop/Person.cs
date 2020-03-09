@@ -23,7 +23,7 @@
 
         public override string ToString()
         {
-            return $"Name:  {Name} \n Identity: {Id} \n Contact: {Contact} \n Adress: {Contact} \n Email: {Email}";
+            return $" Name:  {Name} \n Identity: {Id} \n Contact: {Contact} \n Adress: {Contact} \n Email: {Email}";
         }
     }
 }
